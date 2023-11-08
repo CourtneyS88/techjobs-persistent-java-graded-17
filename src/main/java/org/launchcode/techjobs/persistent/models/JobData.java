@@ -58,13 +58,13 @@ public class JobData {
         return theValue;
     }
 
-    /**
-     * Search all Job fields for the given term.
-     *
-     * @param value The search term to look for.
-     * @param allJobs The list of jobs to search.
-     * @return      List of all jobs with at least one field containing the value.
-     */
+//    /**
+//     * Search all Job fields for the given term.
+//     *
+//     * @param value The search term to look for.
+//     * @param allJobs The list of jobs to search.
+//     * @return      List of all jobs with at least one field containing the value.
+//     */
     public static ArrayList<Job> findByValue(String value, Iterable<Job> allJobs) {
 
 

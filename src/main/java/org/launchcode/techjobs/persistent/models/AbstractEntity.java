@@ -4,15 +4,22 @@ package org.launchcode.techjobs.persistent.models;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.MappedSuperclass;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
-
 import java.util.Objects;
 
+
+@MappedSuperclass
 public abstract class AbstractEntity {
 
+    @Id
+    @GeneratedValue
     private int id;
 
+
+    @NotBlank(message = "Title is required.")
+    @Size(min = 2, max = 250, message = "Job name must be 2-250 characters long")
     private String name;
 
     public int getId() {
