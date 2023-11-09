@@ -1,10 +1,10 @@
 --Part 1
 
 
-id INT PRIMARY KEY,
-employer VARCHAR(50)
-name VARCHAR(50)
-skills VARCHAR(50)
+--id INT PRIMARY KEY,
+--employer VARCHAR(50)
+--name VARCHAR(50)
+--skills VARCHAR(50)
 
 
 
@@ -19,7 +19,7 @@ WHERE location = "St. Louis City";
 DROP TABLE job;
 
 --Part 4
-SELECT * FROM skills
+SELECT * FROM skill
 LEFT JOIN  job_skills ON skill_id = job_skills.skills_id
 WHERE job_skills.jobs_id IS NOT NULL
-ORDER BY ASC;
+ORDER BY name ASC;

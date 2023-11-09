@@ -9,7 +9,7 @@ import java.util.List;
 @Entity
 public class Job extends AbstractEntity {
 
-    private String name;
+
 
 
     @ManyToOne
@@ -26,16 +26,6 @@ public class Job extends AbstractEntity {
     }
 
 //Getter and setters
-
-    @Override
-    public String getName() {
-        return name;
-    }
-
-    @Override
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public Employer getEmployer() {
         return employer;
